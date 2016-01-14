@@ -60,7 +60,6 @@ maxSampVol <- c(3900)
 subNum <- c(1001)
 
 # generate bottle volume table(s) for lab for each storm
-source("//Sunset/data s archives/HNS_Archive/Water_Quality/GLRI_Edge_of_Field/RStudio Files/labDataOutMI.R")
 tableOut <- labDataOutMI(adaps_data_all,StormStart,StormEnd,StormName,maxBottleVol,maxSampVol,subNum=subNum)
 # look at table(s) generated for lab sample instructions for storm event(s). determine if changes are needed
 for (i in 1:length(StormStart)){
@@ -88,5 +87,4 @@ bottlePickup <- c("Bottles 1001 through 1007 picked up 2015-10-29")
 stormEventsTable(StormName,StormStart,StormEnd,tableOut,maxBottleVol,bottlePickup)
 
 # generate simple table for lab
-source("//Sunset/data s archives/HNS_Archive/Water_Quality/GLRI_Edge_of_Field/RStudio Files/labVolumesTableMI.R")
 labVolumesTableMI(StormName,StormStart,StormEnd,tableOut,bottlePickup)
